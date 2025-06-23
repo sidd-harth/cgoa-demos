@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: highway-animation
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: highway-animation
@@ -19,4 +19,4 @@ spec:
         - containerPort: 3000
         env:
         - name: POD_COUNT
-          value: "10" 
+          value: "1" 

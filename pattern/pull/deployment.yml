@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-visualizer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-visualizer
+  template:
+    metadata:
+      labels:
+        app: gitops-visualizer
+    spec:
+      containers:
+      - name: gitops-visualizer
+        image: siddharth67/gitops-visualizer:pull
+        ports:
+        - containerPort: 80
