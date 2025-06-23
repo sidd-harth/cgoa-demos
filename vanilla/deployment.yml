@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: highway-animation
-        image: highway-animation:blue
+        image: siddharth67/highway-animation:blue
         ports:
         - containerPort: 3000
         env:
