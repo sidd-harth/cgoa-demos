@@ -1,23 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pull-pattern
+  name: webhook-pattern
   namespace: patterns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pull-pattern
+      app: webhook-pattern
   template:
     metadata:
       labels:
-        app: pull-pattern
+        app: webhook-pattern
     spec:
       containers:
-      - name: pull-pattern
-        image: siddharth67/gitops-visualizer:pull
+      - name: webhook-pattern
+        image: siddharth67/gitops-visualizer:webhook
         ports:
         - containerPort: 80
-
-
-        

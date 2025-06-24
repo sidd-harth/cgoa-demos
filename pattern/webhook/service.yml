@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pull-pattern-svc
+  name: webhook-pattern-svc
   namespace: patterns
 spec:
   selector:
-    app: pull-pattern
+    app: webhook-pattern
   ports:
     - protocol: TCP
       port: 80
