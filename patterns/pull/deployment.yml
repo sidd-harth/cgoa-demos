@@ -4,7 +4,7 @@ metadata:
   name: pull-pattern
   namespace: patterns
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: pull-pattern
