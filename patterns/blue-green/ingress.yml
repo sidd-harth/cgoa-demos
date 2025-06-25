@@ -9,7 +9,7 @@ spec:
       paths:
       - backend:
           service:
-            name: highway-bluegreen-service
+            name: rollout-bluegreen-active
             port:
               number: 3000
         path: /
