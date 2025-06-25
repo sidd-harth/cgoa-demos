@@ -10,7 +10,8 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-  type: ClusterIP 
+      nodePort: 31200
+  type: NodePort 
 ---
 apiVersion: v1
 kind: Service
@@ -24,4 +25,5 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-  type: ClusterIP 
+      nodePort: 31200
+  type: NodePort 
