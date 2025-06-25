@@ -11,6 +11,6 @@ spec:
           service:
             name: highway-bluegreen-service
             port:
-              number: 80
+              number: 3000
         path: /
         pathType: Prefix
