@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: highway-animation
+  namespace: kustomize-dev
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: highway-animation
+        image: siddharth67/highway-animation:blue
+        ports:
+        - containerPort: 3000
+        env:
+        - name: POD_COUNT
+          value: "1" 
