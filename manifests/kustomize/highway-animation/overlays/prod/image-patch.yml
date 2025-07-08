@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: highway-animation
+spec:
+  template:
+    spec:
+      containers:
+      - name: highway-animation
+        image: iddharth67/highway-animation:green
