@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
       - name: highway-animation
-        image: iddharth67/highway-animation:green
+        image: siddharth67/highway-animation:green
