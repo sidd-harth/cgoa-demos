@@ -9,4 +9,4 @@ spec:
       - name: highway-animation
         env:
         - name: POD_COUNT
-          value: "5 
+          value: "5"
