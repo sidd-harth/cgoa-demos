@@ -1,4 +1,4 @@
 resources:
 - ../../base
-patches:
-- replica-count.yml
+patchesStrategicMerge:
+s- replica-count.yml
