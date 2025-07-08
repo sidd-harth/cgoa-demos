@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: siddharth67/highway-animation
+  pullPolicy: IfNotPresent
+  tag: "blue" # Updated image tag
+
+service:
+  type: NodePort # Updated service type
+  port: 3000    # Updated service port
+  targetPort: 3000 # Added targetPort for clarity
+
+containerPort: 3000 # Updated container port
+
+# Environment variables for the container
+env:
+  - name: POD_COUNT
+    value: "1"
+
+# You can add more values here, e.g., resources, environment variables, etc.
+# resources:
+#   limits:
+#     cpu: 100m
+#     memory: 128Mi
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: highway-animation-service # Explicitly set service name as per your example
+  labels:
+    app: highway-animation # Explicitly set app label
+spec:
+  selector:
+    app: highway-animation # Explicitly set app label
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      name: http # Added name for the port
+  type: {{ .Values.service.type }}

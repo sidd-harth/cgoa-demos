@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: highway-animation # Explicitly set name as per your example
+  labels:
+    app: highway-animation # Explicitly set app label
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: highway-animation # Explicitly set app label
+  template:
+    metadata:
+      labels:
+        app: highway-animation # Explicitly set app label
+    spec:
+      containers:
+        - name: highway-animation # Explicitly set container name
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.containerPort }}
+              protocol: TCP
+          env: # Added environment variables
+            {{- toYaml .Values.env | nindent 12 }}
+          # Add resource limits/requests if defined in values.yaml
+          {{- if .Values.resources }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
