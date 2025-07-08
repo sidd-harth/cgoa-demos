@@ -2,16 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: highway-animation
-  namespace: kustomize-prod
 spec:
-  replicas: 3
   template:
     spec:
       containers:
       - name: highway-animation
-        image: siddharth67/highway-animation:blue
-        ports:
-        - containerPort: 3000
         env:
         - name: POD_COUNT
-          value: "3" 
+          value: "2" 
