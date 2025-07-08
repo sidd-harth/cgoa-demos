@@ -1,4 +1,4 @@
 resources:
 - ../../base
 patches:
-- replica-count.yml
+- path: replica-count.yml
