@@ -12,6 +12,6 @@ patches:
   target:
     kind: Deployment
     name: highway-animation
-- path: image-patch.yaml
+- path: image-patch.yml
   target:
     kind: Deployment
